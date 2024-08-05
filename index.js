@@ -69,8 +69,8 @@ function configureDefaults(options) {
   config.jenkinsMode = getSetting(config.jenkinsMode, 'JENKINS_MODE', false);
   config.properties = getSetting(config.properties, 'PROPERTIES', null, parsePropertiesFromEnv);
   config.toConsole = !!config.toConsole;
-  config.rootSuiteTitle = config.rootSuiteTitle || 'Root Suite';
-  config.testsuitesTitle = config.testsuitesTitle || 'Mocha Tests';
+  config.rootSuiteTitle =  getSetting(config.rootSuiteTitle, 'ROOT_SUITE_TITLE', 'Root Suite');
+  config.testsuitesTitle = getSetting(config.testsuitesTitle, 'TEST_SUITES_TITLE, 'Mocha Tests');
 
   if (config.antMode) {
     updateOptionsForAntMode(config);
