@@ -70,7 +70,7 @@ function configureDefaults(options) {
   config.properties = getSetting(config.properties, 'PROPERTIES', null, parsePropertiesFromEnv);
   config.toConsole = !!config.toConsole;
   config.rootSuiteTitle =  getSetting(config.rootSuiteTitle, 'ROOT_SUITE_TITLE', 'Root Suite');
-  config.testsuitesTitle = getSetting(config.testsuitesTitle, 'TEST_SUITES_TITLE, 'Mocha Tests');
+  config.testsuitesTitle = getSetting(config.testsuitesTitle, 'TEST_SUITES_TITLE', 'Mocha Tests');
 
   if (config.antMode) {
     updateOptionsForAntMode(config);
